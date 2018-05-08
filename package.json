@@ -1,0 +1,26 @@
+{
+  "name": "citr",
+  "version": "1.0.0",
+  "description": "Unit converter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "tap --timeout=200 --cov test/test-*.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/setogit/cityline.git"
+  },
+  "license": "MIT",
+  "author": "Tetsuo Seto <setogit@gmail.com>",
+  "devDependencies": {
+    "request": "^2.85.0",
+    "tap": "^11.1.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mathjs": "^4.2.2",
+    "urlencode": "^1.1.0"
+  }
+}

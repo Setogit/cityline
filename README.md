@@ -45,7 +45,7 @@ GET /units/si?units=(degree/minute)
 ```js
 {
     "unit_name": "(rad/s)",
-    "multiplication_factor": .00029088820867
+    "multiplication_factor": 0.0002908882086657216
 }
 ```
 
@@ -61,10 +61,16 @@ This table denotes valid input and conversion factors for you to implement. Eith
 | degree | ° | unitless/plane angle | (π/180) rad |
 | arcminute | ' | unitless/plane angle | (π/10800) rad |
 | arcsecond | " | unitless/plane angle | (π/648000) rad |
-| hectare | ha | area | 10000 m<sup>2</sup> |
-| litre | L | volume | 0.001 m<sup>3<s/up> |
+| hectare | ha | area | 10000 m2 |
+| litre | L | volume | 0.001 m3 |
 | tonne | t | mass | 1000 kg |
 
+## Known Limitations
+
+* 1.0.0 Initial release  setogit@gmail.com
+    ** '°', "'", '"' are not supported because mathjs is used for format validation.  At the moment, the value of mathjs parser exceeds this feature value.
+    ** Parens are practically ignored.
+    ** Supported formats are: <A>, <A>*<B> and <A>/<B> with parens.  For example, (degree/(minute*hectare)) is not supported.
 
 ## Revision History
 

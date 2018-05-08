@@ -31,7 +31,7 @@ t.test('convert positive - degree', function(t) {
     'multiplication_factor returns non-null value.');
   t.type(converted.multiplication_factor, 'number',
     'multiplication_factor is a number type.');
-  t.equal(mj.compare(converted.multiplication_factor, .005555555555555556), 0,
+  t.equal(mj.compare(converted.multiplication_factor, 0.017453292519943295), 0,
     'multiplication_factor is correct real number.');
   t.end();
 });
@@ -48,7 +48,7 @@ t.test('convert positive - (degree/minute)', function(t) {
     'multiplication_factor returns non-null value.');
   t.type(converted.multiplication_factor, 'number',
     'multiplication_factor is a number type.');
-  t.equal(mj.compare(converted.multiplication_factor, .0000925925925925926), 0,
+  t.equal(mj.compare(converted.multiplication_factor, 0.0002908882086657216), 0,
     'multiplication_factor is correct real number.');
   t.end();
 });

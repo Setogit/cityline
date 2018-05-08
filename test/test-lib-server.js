@@ -42,7 +42,7 @@ server.startServer(() => {
         t.doesNotThrow(parseJson.bind(null, body));
         t.comment(parsed)
         t.equal(parsed.unit_name, 'rad/s', method  + ' returns right unit_name.');
-        t.equal(mj.compare(parsed.multiplication_factor, .0000925925925925926), 0,
+        t.equal(mj.compare(parsed.multiplication_factor, 0.0002908882086657216), 0,
           'mathjs returns a correct real number for (degree/minute).');
         t.notEqual(response, null, method  + ' non-null status.');
         t.end();

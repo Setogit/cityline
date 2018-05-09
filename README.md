@@ -6,18 +6,20 @@ The web service has a single endpoint with a single method, **Convert Units**, w
 ## Installation
 
 ```shell
-  npm install git+https://github.com/setogit/citr.git
+  git clone git@github.com:Setogit/cityline.git
 ```
 
 ## Start the Service
 
 ```shell
+  cd cityline
   npm start
 ```
 
 ## Test the Service
 
 ```shell
+  cd cityline
   npm test
 ```
 

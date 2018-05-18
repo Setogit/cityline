@@ -23,9 +23,7 @@ RUN git clone https://github.com/Setogit/cityline.git \
     && npm install
 
 # Still need to bind in runtime like "-p 80:3000"
-# TensorBoard for cityline
 EXPOSE 3000
 
-# Multiple services started in a separate shell script
 WORKDIR "/mycity"
 CMD ["nodejs", "--use_strict", "cityline/index.js"]

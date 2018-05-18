@@ -8,7 +8,7 @@ The web service has a single endpoint with a single method, **Convert Units**, w
 ```shell
   docker pull setogit/cityline
 
-  docker run -p 80:3000 -t cityline:latest 
+  docker run -p 80:3000 -t setogit/cityline
 
   curl http://localhost/units/si/?units="(degree/minute)"
 ```

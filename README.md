@@ -3,10 +3,20 @@ Convert Units
 
 The web service has a single endpoint with a single method, **Convert Units**, which will convert any properly formatted unit string to their SI counterparts. 
 
-## Installation
+## Installation from Docker Hub
 
 ```shell
-  git clone git@github.com:Setogit/cityline.git
+  docker pull setogit/cityline
+
+  docker run -p 80:3000 -t cityline:latest 
+
+  curl http://localhost/units/si/?units="(degree/minute)"
+```
+
+## Installation from Github
+
+```shell
+  git clone https://github.com/Setogit/cityline.git
 ```
 
 ## Start the Service

@@ -6,11 +6,12 @@ const t = require('tap');
 const uuid = require('uuid');
 const urlencode = require('urlencode');
 
-const baseUrl = 'http://localhost:3000/';
+const testPort = 3001
+const baseUrl = 'http://localhost:' + testPort.toString() + '/';
 const cmd = 'units/si/';
 const method = 'get';
 
-server.startServer(() => {
+server.startServer(testPort, () => {
 
   t.test('server started', (t) => {
       t.pass('server started');

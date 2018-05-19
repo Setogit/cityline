@@ -1,3 +1,5 @@
+'use strict';
+
 const convert = require('../lib/convert');
 const mj = require('mathjs');
 const t = require('tap');

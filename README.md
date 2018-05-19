@@ -3,7 +3,8 @@
 <a href='https://travis-ci.org/Setogit/cityline'>
 <img src='https://travis-ci.org/Setogit/cityline.svg?branch=master' alt='Build Status'/>
 </a>
-<a href='https://coveralls.io/github/Setogit/cityline'><img src='https://coveralls.io/repos/github/Setogit/cityline/badge.svg' alt='Coverage Status' /></a>
+<a href='https://coveralls.io/github/Setogit/cityline?branch=master'><img src='https://coveralls.io/repos/github/Setogit/cityline/badge.svg?branch=master' alt='Coverage Status' /></a>
+
 
 
 The web service has a single endpoint with a single method, **Convert Units**, which will convert any properly formatted unit string to their SI counterparts. 

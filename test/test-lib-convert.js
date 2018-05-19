@@ -55,6 +55,23 @@ t.test('positive - (degree/minute)', (t) => {
   t.end();
 });
 
+t.test('positive - (degree*minute)', (t) => {
+  const converted = convert.toSI('(degree*minute)');
+  t.comment(converted);
+  t.assert(converted !== null, 'converted returns non-null value.');
+  t.type(converted, 'object', 'converted returns an object.');
+  t.assert(converted.unit_name !== null, 'unit_name returns non-null value.');
+  t.type(converted.unit_name, 'string', 'unit_name is a string type.');
+  t.equal(converted.unit_name, 'rad*s', 'unit_name returns correct result.');
+  t.assert(converted.multiplication_factor !== null,
+    'multiplication_factor returns non-null value.');
+  t.type(converted.multiplication_factor, 'number',
+    'multiplication_factor is a number type.');
+  t.equal(mj.compare(converted.multiplication_factor, 1.0471975511965976), 0,
+    'multiplication_factor is correct real number.');
+  t.end();
+});
+
 t.test('positive - ha/L', (t) => {
   const converted = convert.toSI('ha/L');
   t.comment(converted);
@@ -75,6 +92,18 @@ t.test('positive - ha/L', (t) => {
 /**
  * Negative cases -- Supported
  */
+
+t.test('negative - (degree+minute)', (t) => {
+  const converted = convert.toSI('(degree+minute)');
+  t.comment(converted);
+  t.assert(converted !== null, 'converted returns non-null value.');
+  t.type(converted, 'object', 'converted returns an object.');
+  t.assert(converted.unit_name !== null, 'unit_name returns non-null value.');
+  t.type(converted.unit_name, 'string', 'unit_name is a string type.');
+  t.equal(converted.unit_name, '', 'unit_name returns an empty string.');
+  t.end();
+});
+
 
 t.test('negative - paren imbalance - ((degree/minute)', (t) => {
   const converted = convert.toSI('((degree/minute');

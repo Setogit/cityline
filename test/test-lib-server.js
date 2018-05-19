@@ -1,3 +1,5 @@
+'use strict';
+
 const mj = require('mathjs');
 const path = require('path');
 const request = require('request');

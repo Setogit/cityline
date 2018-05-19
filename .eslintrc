@@ -1,0 +1,10 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "extends": "strongloop",
+  "rules": {
+    "no-control-regex": 0,
+    "quote-props": [2, "consistent-as-needed"]
+  }
+}

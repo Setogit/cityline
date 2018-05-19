@@ -4,6 +4,7 @@
   "description": "Unit converter",
   "main": "index.js",
   "scripts": {
+    "pretest": "eslint ./ && jscs ./",
     "coveralls": "tap --coverage-report=text-lcov | coveralls",
     "start": "node index.js",
     "test": "tap --timeout=200 --cov test/test-*.*",
@@ -17,9 +18,11 @@
   "author": "Tetsuo Seto <setogit@gmail.com>",
   "devDependencies": {
     "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-strongloop": "^2.1.0",
+    "jscs": "^3.0.7",
     "request": "^2.85.0",
-    "tap": "^11.1.4",
-    "uuid": "^3.2.1"
+    "tap": "^11.1.4"
   },
   "dependencies": {
     "body-parser": "^1.18.2",

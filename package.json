@@ -7,7 +7,7 @@
     "pretest": "eslint ./ && jscs ./",
     "coveralls": "tap --coverage-report=text-lcov | coveralls",
     "start": "node index.js",
-    "test": "tap --timeout=200 --cov test/test-*.*",
+    "test": "tap --coverage --coverage-report=cobertura --timeout=200 test/test-*.*",
     "posttest": "tap --coverage-report=lcov --no-browser && tap --coverage-report=text"
   },
   "repository": {
